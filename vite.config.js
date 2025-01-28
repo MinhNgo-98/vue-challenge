@@ -11,6 +11,13 @@ export default defineConfig({
   plugins:[
     vue(),
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "src/styles/main.scss";`,
+      },
+    },
+  },
   build: {
     target: "esnext",
     outDir,
@@ -22,10 +29,10 @@ export default defineConfig({
       "@root": fileURLToPath(new URL("./", import.meta.url)),
       "@src": fileURLToPath(new URL("./src", import.meta.url)),
       "@public": fileURLToPath(new URL("./public", import.meta.url)),
-      "@assets": fileURLToPath(new URL("./assets", import.meta.url)),
-      "@components": fileURLToPath(new URL("./components", import.meta.url)),
-      "@views": fileURLToPath(new URL("./views", import.meta.url)),
-      "@data": fileURLToPath(new URL("./data", import.meta.url)),
+      "@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
+      "@components": fileURLToPath(new URL("./src/components", import.meta.url)),
+      "@views": fileURLToPath(new URL("./src/views", import.meta.url)),
+      "@data": fileURLToPath(new URL("./src/data", import.meta.url)),
     }
   }
 });

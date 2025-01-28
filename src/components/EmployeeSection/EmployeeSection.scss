@@ -1,0 +1,9 @@
+.employee-section {
+  background-color: $color-light-purple;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}

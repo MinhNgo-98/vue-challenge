@@ -1,14 +1,26 @@
 {
   "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": "./",
     "paths": {
       "@root/*": ["*"],
-      "@src/*": ["src/*"],
-      "@public/*": ["public/*"],
-      "@assets/*": ["assets/*"],
-      "@components/*": ["components/*"],
-      "@views/*": ["views/*"],
-      "@data/*": ["data/*"],
-    }
-  }
+      "@src/*": ["./src/*"],
+      "@public/*": ["./public/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components/*": ["./src/components/*"],
+      "@views/*": ["./src/views/*"],
+      "@data/*": ["./src/data/*"]
+    },
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
