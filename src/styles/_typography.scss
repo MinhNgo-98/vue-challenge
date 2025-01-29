@@ -1,0 +1,22 @@
+body {
+  font-family: $font-family-normal;
+  color: $color-black;
+}
+
+h1 {
+  font-size: $font-size-large;
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+}
+
+p,
+a,
+input,
+label {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+}
