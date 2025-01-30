@@ -1,2 +1,15 @@
 @import './variables.scss';
 @import './typography.scss';
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 48px;
+  row-gap: 48px;
+  padding: 24px;
+}

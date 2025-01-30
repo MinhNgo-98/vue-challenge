@@ -1,11 +1,10 @@
 <template>
   <div id="app">
     <header></header>
-    <main>
+    <main class="container">
       <Logo />
       <EmployeeSection />
       <ServiceSection />
-      <DisplaySection />
     </main>
     <footer>
       <Banner />
@@ -17,9 +16,9 @@
 import Logo from '@components/Logo/Logo.vue'
 import EmployeeSection from '@components/EmployeeSection/EmployeeSection.vue';
 import ServiceSection from '@components/ServiceSection/ServiceSection.vue';
-import DisplaySection from '@components/DisplaySection/DisplaySection.vue';
 import Banner from '@components/Banner/Banner.vue';
 </script>
 
-<style scoped>
+<style lang="scss">
+@import './styles/main.scss';
 </style>

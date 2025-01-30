@@ -1,0 +1,15 @@
+.service-dropdown {
+  list-style: none;
+  
+  &__submenu {
+    list-style: none;
+  }
+
+  &__button {
+    background-color: $color-green;
+
+    &--unavailable {
+      background-color: $color-red;
+    }
+  }
+}
