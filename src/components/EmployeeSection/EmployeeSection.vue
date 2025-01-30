@@ -1,6 +1,8 @@
 <template>
   <section class="employee-section">
-    <h2>Unsere Mitarbeiter</h2>
+    <h2 class="employee-section__headline">
+      Unsere Mitarbeiter
+    </h2>
     <ul class="employee-section__list">
       <Employee
         v-for="(employee, index) of employees"

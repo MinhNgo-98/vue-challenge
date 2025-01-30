@@ -1,14 +1,11 @@
 <template>
-  <div id="app">
-    <header></header>
-    <main class="container">
+  <div>
+    <main class="main container">
       <Logo />
       <EmployeeSection />
       <ServiceSection />
-    </main>
-    <footer>
       <Banner />
-    </footer>
+    </main>
   </div>
 </template>
 

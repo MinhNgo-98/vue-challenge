@@ -1,7 +1,8 @@
 <template>
   <section class="service-section">
-    <h2>Dienstleistungen</h2>
-
+    <h2 class="service-section__headline">
+      Dienstleistungen
+    </h2>
     <ul class="service-section-dropdown">
       <ServiceDropdown
         v-for="category in categories"
