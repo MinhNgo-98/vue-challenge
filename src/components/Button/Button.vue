@@ -14,27 +14,22 @@
             {{ label }}
           </slot>
         </span>
-        <span v-if="icon" class="button__icon-wrapper">
-          <ArrowIcon />
-        </span>
+        <Icon name="arrow-up" />
       </span>
     </slot>
   </button>
 </template>
 
 <script setup lang="ts">
-import {
-  defineProps, withDefaults, computed
-} from 'vue';
-
-import ArrowIcon from '@assets/icons/arrow-up.svg';
+import { defineProps, withDefaults, computed } from 'vue';
+import Icon from '@components/Icon/icon.vue';
 
 interface Button {
-  label: string,
-  ariaLabel: string,
-  type: '' | 'primary',
-  icon: boolean,
-  disabled: boolean
+  label?: string,
+  ariaLabel?: string,
+  type?: '' | 'primary',
+  icon?: boolean,
+  disabled?: boolean,
 }
 
 const props = withDefaults(defineProps<Button>(), {
@@ -49,6 +44,12 @@ const buttonClasses = computed(() => ({
   [`button--${props.type}`]: true,
   'button--disabled': props.disabled,
 }));
+
+const action = () => {
+  if (!props.disabled) {
+    console.log('Button clicked!');
+  }
+};
 </script>
 
 <style lang="scss" scoped>

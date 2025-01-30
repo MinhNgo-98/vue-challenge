@@ -7,11 +7,12 @@
         'service-dropdown__button--unavailable': !category.available
       }"
       :label="category.name"
+      :ariaLabel="category.name" 
+      :disabled="!category.available"
       @click="toggleDropdown"
-      :icon="category.children.length"
+      :icon="category.children.length > 0"
     />
 
-    <!-- Subcategories (Only opens if it's the selected one at this level) -->
     <ul
       v-if="openDropdowns[level] === category.id && category.children.length"
       class="service-dropdown__submenu"

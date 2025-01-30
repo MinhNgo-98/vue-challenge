@@ -18,7 +18,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import ServiceDropdown from "@components/ServiceDropdown/ServiceDropdown.vue";
-import categories from "@src/data/categories.js";
+import categories from "@root/src/data/categories.js";
 
 // Global state to track open dropdowns at each level
 const openDropdowns = ref<{ [key: number]: number | null }>({});

@@ -1,17 +1,18 @@
 <template>
   <li class="employee">
-    <img :src="data.icon" :alt="`${data.name} Icon`"/>
+    <Icon :name="data.icon" />
     <span>{{ data.name }}</span>
   </li>
 </template>
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
+import Icon from '@components/Icon/Icon.vue';
 
 interface Employee {
   name: string;
-  icon: string;
-};
+  icon: string; // The name of the icon (e.g., 'person1')
+}
 
 defineProps<{
   data: Employee;

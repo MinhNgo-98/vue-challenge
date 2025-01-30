@@ -4,16 +4,17 @@
     justify-content: center;
   }
 
-  &__icon-wrapper {
+  .icon {
     background-color: $color-light-purple;
     width: 12px;
     height: 12px;
     transform: rotate(180deg);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $color-blue;
+    }
   }
 
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: $color-blue;
-  }
 }
