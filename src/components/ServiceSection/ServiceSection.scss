@@ -1,3 +1,36 @@
 .service-section {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  height: fit-content;
+
+  &-menu {
+    width: 33.3%;
+
+    &__dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &-display-panel {
+    width: 33.3%;
+    background-color: $color-light-purple;
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &__headline {
+      text-align: center;
+    }
+
+    &__button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

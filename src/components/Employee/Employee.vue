@@ -11,7 +11,7 @@ import Icon from '@components/Icon/Icon.vue';
 
 interface Employee {
   name: string;
-  icon: string; // The name of the icon (e.g., 'person1')
+  icon: string;
 }
 
 defineProps<{

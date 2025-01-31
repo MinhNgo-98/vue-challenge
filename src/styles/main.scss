@@ -11,9 +11,15 @@ body {
   width: 100vw;
 }
 
+#app {
+  height: 100%
+}
+
 .container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 48px;
   row-gap: 48px;

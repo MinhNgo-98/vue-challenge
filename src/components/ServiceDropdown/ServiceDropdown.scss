@@ -1,15 +1,26 @@
 .service-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   list-style: none;
   
   &__submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     list-style: none;
   }
 
   &__button {
-    background-color: $color-green;
+    min-width: 480px;
+    width: fit-content;
 
     &--unavailable {
       background-color: $color-red;
+
+      &:focus-visible {
+        outline-color: $color-red;
+      }
     }
   }
 }

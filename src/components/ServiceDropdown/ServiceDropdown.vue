@@ -1,14 +1,12 @@
 <template>
   <li class="service-dropdown">
-    <!-- Main category button -->
     <Button
       class="service-dropdown__button"
       :class="{
         'service-dropdown__button--unavailable': !category.available
       }"
       :label="category.name"
-      :ariaLabel="category.name" 
-      :disabled="!category.available"
+      :ariaLabel="category.name"
       @click="toggleDropdown"
       :icon="category.children.length > 0"
     />
@@ -24,6 +22,7 @@
         :openDropdowns="openDropdowns"
         :level="level + 1"
         @update-open="$emit('update-open', level + 1, $event)"
+        @select-category="$emit('select-category', $event)"
       />
     </ul>
   </li>
@@ -33,22 +32,24 @@
 import Button from "@components/Button/Button.vue";
 import { defineProps, defineEmits } from "vue";
 
-// Props
 const props = defineProps<{
   category: any;
   openDropdowns: { [key: number]: number | null };
   level: number;
 }>();
 
-// Emit event to update open dropdown
-const emit = defineEmits(["update-open"]);
+const emit = defineEmits(["update-open", "select-category"]);
 
 const toggleDropdown = () => {
-  const newOpen = props.openDropdowns[props.level] === props.category.id ? null : props.category.id;
-  emit("update-open", props.level, newOpen);
+  if (props.category.children.length > 0) {
+    const newOpen = props.openDropdowns[props.level] === props.category.id ? null : props.category.id;
+    emit("update-open", props.level, newOpen);
+  }
+
+  emit("select-category", props.category);
 };
 </script>
 
 <style lang="scss" scoped>
-@import './ServiceDropdown.scss'
+@import './ServiceDropdown.scss';
 </style>

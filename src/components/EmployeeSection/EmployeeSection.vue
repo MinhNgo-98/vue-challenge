@@ -1,6 +1,6 @@
 <template>
   <section class="employee-section">
-    <h2 class="employee-section__headline">
+    <h2 class="employee-section__headline font-large">
       Unsere Mitarbeiter
     </h2>
     <ul class="employee-section__list">

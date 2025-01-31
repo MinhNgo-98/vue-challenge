@@ -1,8 +1,9 @@
 .employee-section {
-  width: 60%;
+  width: 55%;
   background-color: $color-light-purple;
-  padding: 24px;
+  padding: 32px;
   border-radius: 16px;
+  height: fit-content;
 
   &__headline {
     margin-bottom: 24px;

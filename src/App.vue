@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <main class="main container">
-      <Logo />
-      <EmployeeSection />
-      <ServiceSection />
-      <Banner />
-    </main>
-  </div>
+  <main class="main container">
+    <Logo />
+    <EmployeeSection />
+    <ServiceSection />
+    <Banner />
+  </main>
 </template>
 
 <script setup lang="ts">
