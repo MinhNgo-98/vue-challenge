@@ -16,8 +16,6 @@
 <script setup lang="ts">
 import Employee from '@components/Employee/Employee.vue';
 import employees from '@data/employees'
-
-console.log(employees)
 </script>
 
 <style lang="scss" scoped>

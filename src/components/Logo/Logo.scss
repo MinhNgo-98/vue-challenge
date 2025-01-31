@@ -2,5 +2,12 @@
   height: auto;
   width: 40%;
   object-fit: contain;
-  height: fit-content;
+
+  @media screen and (max-width: 1024px) {
+    width: 500px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 300px;
+  }
 }

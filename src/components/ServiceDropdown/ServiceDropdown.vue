@@ -21,7 +21,7 @@
         :category="child"
         :openDropdowns="openDropdowns"
         :level="level + 1"
-        @update-open="$emit('update-open', level + 1, $event)"
+        @update-open="handleUpdateOpen"
         @select-category="$emit('select-category', $event)"
       />
     </ul>
@@ -47,6 +47,10 @@ const toggleDropdown = () => {
   }
 
   emit("select-category", props.category);
+};
+
+const handleUpdateOpen = (level: number, categoryId: number | null) => {
+  emit("update-open", level, categoryId);
 };
 </script>
 

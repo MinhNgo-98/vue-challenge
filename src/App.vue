@@ -1,9 +1,14 @@
 <template>
   <main class="main container">
-    <Logo />
-    <EmployeeSection />
-    <ServiceSection />
-    <Banner />
+    <h1 class="sr-only">Unser Krankenhaus</h1>
+    <div class="main__top-area">
+      <Logo />
+      <EmployeeSection />
+    </div>
+    <div class="main__bottom-area">
+      <ServiceSection />
+      <Banner />
+    </div>
   </main>
 </template>
 
