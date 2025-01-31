@@ -2,6 +2,7 @@
   <button
     class="button"
     :class="[buttonClasses, { active: isActive }]"
+    role="button"
     :disabled="disabled"
     :aria-disabled="disabled"
     :aria-label="ariaLabel"
