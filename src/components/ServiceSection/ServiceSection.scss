@@ -1,3 +1,78 @@
 .service-section {
-  background-color: $color-green;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 64px;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &-menu {
+    width: 33.3%;
+
+    @media screen and (max-width: 1024px) {
+      width: 500px; 
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 300px; 
+    }
+
+    &__dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 0;
+    }
+  }
+
+  &-display-panel {
+    width: 36%;
+    height: 570px;
+    max-height: 570px;
+    background-color: $color-light-purple;
+    padding: 32px;
+    border-radius: 16px;
+
+    @media screen and (max-width: 1024px) {
+      width: 500px;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 300px; 
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__content-wrapper {
+      flex: 1;
+      overflow-y: scroll;
+    }
+
+    &__headline {
+      text-align: center;
+    }
+
+    &__button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__placeholder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
 }

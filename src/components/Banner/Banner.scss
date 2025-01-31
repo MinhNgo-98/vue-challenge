@@ -1,3 +1,11 @@
 .banner {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   background-color: $color-blue;
+  color: $color-white;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
 }

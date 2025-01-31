@@ -1,6 +1,6 @@
 <template>
-  <div class="banner">
-    <h2>Banner</h2>
+  <div class="banner font-small">
+    <span>Ab nächste Woche neue Dienstleistungen!</span>
   </div>
 </template>
 
@@ -8,5 +8,5 @@
 </script>
 
 <style lang="scss" scoped>
-@import './Banner.scss'
+@import './Banner.scss';
 </style>

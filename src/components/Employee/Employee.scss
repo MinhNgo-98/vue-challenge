@@ -3,4 +3,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 16px;
+
+  @media screen and (max-width: 480px) {
+    width: calc(50% - 12px);
+  }
+
+  .icon {
+    height: auto;
+    width: 100%;
+  }
 }

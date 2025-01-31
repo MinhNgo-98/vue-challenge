@@ -3,20 +3,25 @@ body {
   color: $color-black;
 }
 
-h1 {
+.font-large {
   font-size: $font-size-large;
   font-weight: $font-weight-bold;
 }
 
-h2 {
+.font-medium {
   font-size: $font-size-medium;
   font-weight: $font-weight-bold;
 }
 
 p,
-a,
-input,
-label {
+label,
+.font-regular {
   font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+}
+
+span,
+.font-small {
+  font-size: $font-size-small;
   font-weight: $font-weight-regular;
 }

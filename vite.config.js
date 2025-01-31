@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from "node:url";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
+import svgLoader from 'vite-svg-loader';
 
 const outDir = resolve(__dirname, "dist");
 
@@ -10,6 +11,7 @@ export default defineConfig({
   base: "/vue-challenge/",
   plugins:[
     vue(),
+    svgLoader()
   ],
   css: {
     preprocessorOptions: {

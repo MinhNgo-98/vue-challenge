@@ -1,4 +1,13 @@
-const categories = [
+interface Category {
+  id: Number,
+  name: String,
+  description: String,
+  price: Number | null,
+  available: Boolean,
+  children: Array<Category>
+}
+
+const categories: Array<Category> = [
   {
     id: 1,
     name: "Allgemeine Pflege",
